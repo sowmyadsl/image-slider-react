@@ -1,0 +1,19 @@
+const imagesList = [
+  {
+    "name": "Yosemite",
+    "fileName": "Yosemite.jpg",
+    "url": "https://www.nps.gov/yose/index.htm"
+  },
+  {
+    "name": "CraterLake",
+    "fileName": "CraterLake.jpg",
+    "url": "https://www.nps.gov/yose/index.htm"
+  },
+  {
+    "name": "YellowStone",
+    "fileName": "YellowStone.jpg",
+    "url": "https://www.nps.gov/yose/index.htm"
+  }
+]
+
+export default imagesList

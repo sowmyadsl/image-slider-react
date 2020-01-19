@@ -3,6 +3,28 @@
 .test {
   display: inline-block;
   margin: 2em auto;
-  border: 2px solid #000;
   font-size: 2em;
+}
+
+.image {
+  max-width: 100%;
+}
+
+
+.imageSlideContainer {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  text-align: center;
+  position: relative;
+}
+.arrowContainer {
+  max-width: 48px;
+}
+.prevButton {
+  max-width: 48px;
+}
+.nextButton {
+  max-width: 48px;
 }
