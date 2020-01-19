@@ -1,15 +1,30 @@
-import React from 'react'
-import styles from './../styles.css'
+import React from 'react';
 
 function ImageSlide(props) {
   const { image } = props;
-  const imagePath = require(`/Users/sowmyaudai/projects/carousel-component/src/assets/images/${image.fileName}`);
+  const style = {
+    backgroundImage: `url(${image.location})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 60%',
+    height: '100%',
+    width: '100%',
+    display: 'inline-block'
+  };
+  const linkStyle= {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: '0',
+    left: '0',
+    zIndex: '1'
+  }
 
-  return(
-    <div className={styles.imageSlideContainer}>
-    <a href={image.url} target="_blank">
-      <img src={imagePath} className={styles.image} />
-    </a>
+  return (
+    <div className="image-slide" style={style}>
+      <a href={image.url} target="_blank">
+        <span className="no-content" style={linkStyle}></span>
+      </a>
     </div>
   );
 }
