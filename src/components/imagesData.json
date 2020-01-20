@@ -7,7 +7,7 @@ const imagesList = [
   {
     "name": "CraterLake",
     "location": "https://images.unsplash.com/photo-1476681227192-05dedd2b6709?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80",
-    "url": "https://www.nps.gov/yose/index.htm"
+    "url": "https://www.nps.gov/crla/index.htm"
   },
   {
     "name": "Olympic",
@@ -17,13 +17,13 @@ const imagesList = [
   {
     "name": "YellowStone",
     "location": "https://images.unsplash.com/photo-1554748795-bb013b2fb701?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    "url": "https://www.nps.gov/yose/index.htm"
+    "url": "https://www.nps.gov/yell/index.htm"
   },
   {
     "name": "Yosemite",
     "location": "https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
     "url": "https://www.nps.gov/yose/index.htm"
   }
-]
+];
 
 export default imagesList;
