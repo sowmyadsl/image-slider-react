@@ -1,6 +1,6 @@
 {
-  "name": "carousel-component-example",
-  "homepage": "https://sowmyadsl.github.io/carousel-component",
+  "name": "react-img-slider-example",
+  "homepage": "https://sowmyadsl.github.io/react-img-slider",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "carousel-component": "file:.."
+    "react-img-slider": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",

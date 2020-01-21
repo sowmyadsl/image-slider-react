@@ -1,10 +1,10 @@
 {
-  "name": "carousel-component",
+  "name": "react-img-slider",
   "version": "1.0.0",
   "description": "renders a carousel component",
   "author": "sowmyadsl",
   "license": "MIT",
-  "repository": "sowmyadsl/carousel-component",
+  "repository": "sowmyadsl/react-img-slider",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

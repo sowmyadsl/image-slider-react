@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'carousel-component'
+import ExampleComponent from 'react-img-slider'
 
 export default class App extends Component {
   render () {
