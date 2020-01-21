@@ -11,11 +11,13 @@ import styles from "./styles.css";
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       currentImageIndex: 0,
       imageOffset: 0,
       intervalId: null
     };
+
     this.showNextImage = this.showNextImage.bind(this);
     this.showPrevImage = this.showPrevImage.bind(this);
     this.imageWidth = this.imageWidth.bind(this);
@@ -24,6 +26,7 @@ export default class Carousel extends Component {
     this.onHoverOut = this.onHoverOut.bind(this);
   }
 
+  // sets interval for auto advance every 10s after the component gets mounted
   componentDidMount() {
     const intervalId = setInterval(this.showNextImage, 10000);
     this.setState({
@@ -31,14 +34,17 @@ export default class Carousel extends Component {
     });
   }
 
+  // clears the interval on unmounting the component
   componentWillUnmount() {
     return clearInterval(this.state.intervalId);
   }
 
+  // stops the auto advance on mover hover by terminating the interval
   onHoverOver() {
     return clearInterval(this.state.intervalId);
   }
 
+  // auto advances every 10s on moving the mouse out of the image slider
   onHoverOut() {
     const intervalId = setInterval(this.showNextImage, 10000);
     this.setState({
@@ -46,6 +52,7 @@ export default class Carousel extends Component {
     });
   }
 
+  // shows previous image in the slider
   showPrevImage() {
     const { currentImageIndex, imageOffset } = this.state;
     if (currentImageIndex === 0) {
@@ -60,6 +67,7 @@ export default class Carousel extends Component {
     });
   }
 
+  // shows next image in the slider
   showNextImage() {
     const { currentImageIndex, imageOffset } = this.state;
     const nextIndex =
@@ -75,11 +83,14 @@ export default class Carousel extends Component {
     });
   }
 
+  // shows the image associated to the current image index
   showSelectedImg(i) {
     const { currentImageIndex } = this.state;
     if (currentImageIndex === i) {
       return;
     }
+
+    // leveraged the inline block styling of CSS to make all images of carousel appear next to each other and use CSS tranform feature to move the div of images left upon clicking next and right upon clicking previous. Image offet defines the number of pixel div has to move.
     const imageOffset = -i * this.imageWidth();
 
     this.setState({
@@ -88,6 +99,7 @@ export default class Carousel extends Component {
     });
   }
 
+  // Identifies width of each image displayed
   imageWidth() {
     return document.querySelector(".image-slide").clientWidth;
   }
