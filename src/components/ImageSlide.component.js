@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ImageSlide(props) {
   const { image, onHoverOut, onHoverOver } = props;
@@ -31,5 +32,11 @@ function ImageSlide(props) {
     </div>
   );
 }
+
+ImageSlide.propTypes = {
+  image: PropTypes.object.isRequired,
+  onHoverOut: PropTypes.func.isRequired,
+  onHoverOver: PropTypes.func.isRequired
+};
 
 export default ImageSlide;

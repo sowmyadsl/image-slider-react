@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function PagingDot(props) {
   const { index, onDotClick, active } = props;
@@ -21,10 +22,19 @@ function PagingDot(props) {
         onDotClick(index);
       }}
     >
-      {active && <span>{index + 1}</span>}
-      {!active && <span>&#9675;</span>}
+      {active ? <span>{index + 1}</span> : <span>&#9675;</span>}
     </div>
   );
 }
+
+PagingDot.propTypes = {
+  index: PropTypes.number.isRequired,
+  onDotClick: PropTypes.func.isRequired,
+  active: PropTypes.bool
+};
+
+PagingDot.defaultProps = {
+  active: false
+};
 
 export default PagingDot;

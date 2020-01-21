@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Navigation(props) {
   const { onArrowClick, direction, symbol } = props;
@@ -22,11 +23,18 @@ function Navigation(props) {
     fontSize: "1.5em",
     transition: "transform ease-in .1s"
   };
+
   return (
     <div className={`${direction}-arrow`} style={style} onClick={onArrowClick}>
       {symbol}
     </div>
   );
 }
+
+Navigation.propTypes = {
+  onArrowClick: PropTypes.func.isRequired,
+  direction: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired
+};
 
 export default Navigation;
